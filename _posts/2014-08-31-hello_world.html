@@ -1,63 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>---</title>
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-<meta name="title" content="---"/>
-<meta name="generator" content="Org-mode"/>
-<meta name="generated" content="2014-08-31T18:00+0800"/>
-<meta name="author" content="Yang Liu"/>
-<meta name="description" content=""/>
-<meta name="keywords" content=""/>
+<title>2014-08-31-hello_world</title>
+<!-- 2014-10-27 Mon 17:07 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Yang Liu" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  html { font-family: Times, serif; font-size: 12pt; }
   .title  { text-align: center; }
-  .todo   { color: red; }
+  .todo   { font-family: monospace; color: red; }
   .done   { color: green; }
-  .tag    { background-color: #add8e6; font-weight:normal }
-  .target { }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
-  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
-  .center {margin-left:auto; margin-right:auto; text-align:center;}
-  p.verse { margin-left: 3% }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
   pre {
-	border: 1pt solid #AEBDCC;
-	background-color: #F3F5F7;
-	padding: 5pt;
-	font-family: courier, monospace;
-        font-size: 90%;
-        overflow:auto;
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
   }
-  table { border-collapse: collapse; }
-  td, th { vertical-align: top;  }
-  th.right  { text-align:center;  }
-  th.left   { text-align:center;   }
-  th.center { text-align:center; }
-  td.right  { text-align:right;  }
-  td.left   { text-align:left;   }
-  td.center { text-align:center; }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
   dt { font-weight: bold; }
-  div.figure { padding: 0.5em; }
-  div.figure p { text-align: center; }
-  div.inlinetask {
-    padding:10px;
-    border:2px solid gray;
-    margin:10px;
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
     background: #ffffcc;
   }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
   textarea { overflow-x: auto; }
-  .linenr { font-size:smaller }
-  .code-highlighted {background-color:#ffff00;}
-  .org-info-js_info-navigation { border-style:none; }
-  #org-info-js_console-label { font-size:10px; font-weight:bold;
-                               white-space:nowrap; }
-  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
-                                 font-weight:bold; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
   /*]]>*/-->
 </style>
 <script type="text/javascript">
@@ -106,54 +134,33 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
-
 </head>
 <body>
-
-<div id="preamble">
-
-</div>
-
 <div id="content">
-<h1 class="title">---</h1>
-
-
+<h1 class="title">2014-08-31-hello_world</h1>
 ---
 layout: default
 title: 又一次开始
 categories: [善其身]
 ---
-<p>
-前段时间看了一本书，叫<a href="http://book.douban.com/subject/21966353/">《贫穷的本质》</a>。其中讲到，穷人之所以贫穷的一个重要原因，是贫穷本身制约了他们获取信息和各种资源的能力，反而因为过分关注金钱和当下的问题而忽视掉其他可能的选择，从而丧失了改变命运的可能性；某种意义上说，身处贫穷的困境中很难通过自身努力改变。
-</p>
-<p>
+前段时间看了一本书，叫[[http://book.douban.com/subject/21966353/][《贫穷的本质》]]。其中讲到，穷人之所以贫穷的一个重要原因，是贫穷本身制约了他们获取信息和各种资源的能力，反而因为过分关注金钱和当下的问题而忽视掉其他可能的选择，从而丧失了改变命运的可能性；某种意义上说，身处贫穷的困境中很难通过自身努力改变。
+
 最近充分体会到，自己越发陷入了一种时间和精力的赤贫状态。本来就有些不闻窗外事的迂腐，在前厂的工作风格更被某同学评论为/“喜欢习惯性的透支”/；这一年创业开动起来更是彻头彻尾忙瞎了——锻炼、业余爱好、家庭生活、对周围世界的好奇和关注，全都丢到一边。于是身体每况愈下，心里也愈发烦躁起来。
-</p>
-<p>
+
 道理一直都明白，还曾给好些同学瞎掰过自己的观点——人的精力和心气是一种不可逆资源，需要好好保护善加利用。头些年也开始看些佛学的东西，冥想、放空，觉得自己比旁人多少超脱几分。事实还是知易行难，象牙塔内的修行更像是一种小资调调的闲情逸致，还是逃不开*贪嗔痴*和自我。
-</p>
-<p>
+
 这也是特别浓缩的一年，学习、经历了很多。最重要的是自己的认识清楚了不少，关于“想要什么样生活”的答案也有了些进展：
-</p><ul>
-<li>修为不够，却又希望能对自己非常有掌控力——所以还是需要个略宽松和均衡的环境，在金钱、时间和精力这几方面
-</li>
-<li>做的太多、了解和思考的太少——很多时候连目标都没有仔细推敲过。目前看，中短期的目标就是要获取这种宽松、均衡的环境，长期（比较模糊）还是能在对自己有掌控的情况下持续的对外创造价值
-</li>
-<li>创造价值的引擎，是对自我的掌握能力（性格/修为）+ 对世界的认知思考 + 专业技能，这几点正是要在下一个阶段着力打造的
-</li>
-</ul>
+ * 修为不够，却又希望能对自己非常有掌控力——所以还是需要个略宽松和均衡的环境，在金钱、时间和精力这几方面
+ * 做的太多、了解和思考的太少——很多时候连目标都没有仔细推敲过。目前看，中短期的目标就是要获取这种宽松、均衡的环境，长期（比较模糊）还是能在对自己有掌控的情况下持续的对外创造价值
+ * 创造价值的引擎，是对自我的掌握能力（性格/修为）+ 对世界的认知思考 + 专业技能，这几点正是要在下一个阶段着力打造的
 
-
-<p>
 逻辑上还不够自洽，不过作为下个阶段的起点已经够了。我称其为又一次开始，每一次改变和选择都带来很多快乐和痛苦，让人充满期待！
-</p></div>
-
-<div id="postamble">
-<p class="date">Date: 2014-08-31T18:00+0800</p>
+</div>
+<div id="postamble" class="status">
 <p class="author">Author: Yang Liu</p>
-<p class="creator"><a href="http://orgmode.org">Org</a> version 7.9.3f with <a href="http://www.gnu.org/software/emacs/">Emacs</a> version 24</p>
-<a href="http://validator.w3.org/check?uri=referer">Validate XHTML 1.0</a>
-
+<p class="date">Created: 2014-10-27 Mon 17:07</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.7c)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
 </html>

@@ -13,8 +13,8 @@ if ($(window).width() <= 1280) {
 // Variables
     tag1       = $('.pl__all'),
     tag2       = $('.善其身'),
-    tag3       = $('.在别处');
-    // tag4       = $('.place_your_tag_name_here'),
+    tag3       = $('.在别处'),
+    tag4       = $('.星辰大海');
     // tag5       = $('.place_your_tag_name_here'),
     // tag6       = $('.place_your_tag_name_here');
 var sidebar    = $('#sidebar'),
@@ -30,7 +30,7 @@ var clickHandler = function(k) {
     window['tag'+k].delay(50).fadeIn(350);
   }
 };
-for (var i = 1; i <= 3; i++) {
+for (var i = 1; i <= 4; i++) {
   $('#js-label' + i).on('click', clickHandler(i));
 }
 
